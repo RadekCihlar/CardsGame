@@ -8,10 +8,51 @@ public class GuessinTools {
     private ArrayList<Integer> listOfOptions = new ArrayList<>(Arrays.asList(1,2,3,4,1,2,3,4,5,6,7,8,5,6,7,8));
     private char[][] showUser =  {{'#', '#', '#', '#'}, {'#', '#', '#', '#'}, {'#', '#', '#', '#'}, {'#', '#', '#', '#'}};
 
+    public static int getCounter() {
+        return counter;
+    }
 
-    public void generateField(){
+    public static void setCounter(int counter) {
+        GuessinTools.counter = counter;
+    }
+
+    public int getMin() {
+        return min;
+    }
+
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    public int getMax() {
+        return max;
+    }
+
+    public void setMax(int max) {
+        this.max = max;
+    }
+
+    public void generateField() {
 
     }
+
+    private int min = 0;
+    private int max;
+
+
+    // generovani karet
+    public void generateRandomCard() {
+        for (int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+                max = listOfOptions.size();
+                int random = (int) Math.floor(Math.random() * (max - min + 1) + min);
+                int temp = listOfOptions.get(random);
+                System.out.print(temp);
+                listOfOptions.remove(random);
+            }
+            System.out.println();
+
+        }
 
     public void showField(){
     for (int i = 0; i < 4; i++){

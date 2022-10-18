@@ -29,6 +29,7 @@ public class Main {
 
 
         //Show board to user
+
         play.showField();
         play.guess(1,1);
         System.out.println();
