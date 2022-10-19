@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="experimental">
+    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="experimental needs Array print">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessinTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessinTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -97,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666077837648</updated>
       <workItem from="1666077840796" duration="2960000" />
-      <workItem from="1666162396320" duration="12230000" />
+      <workItem from="1666162396320" duration="14249000" />
     </task>
     <task id="LOCAL-00001" summary="Card guessing game!">
       <created>1666078017561</created>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666162236336</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="experimental needs Array print">
+      <created>1666175091764</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666175091766</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +250,8 @@
     <MESSAGE value="preparation for playing field" />
     <MESSAGE value="fixed inputs" />
     <MESSAGE value="experimental" />
-    <option name="LAST_COMMIT_MESSAGE" value="experimental" />
+    <MESSAGE value="experimental needs Array print" />
+    <option name="LAST_COMMIT_MESSAGE" value="experimental needs Array print" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

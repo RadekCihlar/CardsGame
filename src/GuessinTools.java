@@ -5,9 +5,9 @@ import java.util.concurrent.TimeUnit;
 public class GuessinTools {
     private static int counter = 0;
     private int fieldSize;
-    private ArrayList<Integer> listOfOptions = new ArrayList<>();
-    private int[][] showUser;
-    private int[][] guessingField;
+    private ArrayList<Character> listOfOptions = new ArrayList<>();
+    private char[][] showUser;
+    private char[][] guessingField;
 
 
     // Ukazuje herní pole, které je skryté a hráč vidí
@@ -29,7 +29,7 @@ public class GuessinTools {
         }
     }
 
-
+    // Logika hádání
     public void guess(int pos1, int pos2, int pos3, int pos4) throws InterruptedException {
 
         if((pos1 < fieldSize) && (pos2 < fieldSize) && (pos3 < fieldSize) && (pos4 < fieldSize)) {
@@ -62,6 +62,8 @@ public class GuessinTools {
             System.out.println("Enter valid numbers!");
         }
     }
+
+    // Logika zda user Vyhrál
     public boolean alreadyWon(){
         return counter == (fieldSize*2) - 1;
     }
@@ -77,7 +79,7 @@ public class GuessinTools {
     public void generateListOfOptions(){
         for (int j = 0; j < 2; j++){
             for (int i = 1; i <= (fieldSize*fieldSize) / 2; i++){
-                listOfOptions.add(i);
+                listOfOptions.add('i');
             }
         }
 
@@ -90,10 +92,11 @@ public class GuessinTools {
                 showUser[i][j] = '#';
             }
         }
+        setShowUser(showUser);
     }
     // Generate playing field
     public void generateHiddenField(){
-        int[][] guessingField = new int[fieldSize][fieldSize];
+        char[][] guessingField = new char[fieldSize][fieldSize];
         for (int i = 0; i < fieldSize; i++){
             for(int j = 0; j < fieldSize; j++){
                 int random = (int) Math.floor(Math.random() * listOfOptions.size());
@@ -101,6 +104,7 @@ public class GuessinTools {
                 listOfOptions.remove(random);
             }
         }
+        setGuessingField(guessingField);
     }
     // Generate game
     public void generateGame(){
@@ -117,12 +121,28 @@ public class GuessinTools {
         this.fieldSize = fieldSize;
     }
 
-    public int[][] getShowUser() {
+    public ArrayList<Character> getListOfOptions() {
+        return listOfOptions;
+    }
+
+    public void setListOfOptions(ArrayList<Character> listOfOptions) {
+        this.listOfOptions = listOfOptions;
+    }
+
+    public char[][] getShowUser() {
         return showUser;
     }
 
-    public int[][] getGuessingField() {
+    public void setShowUser(char[][] showUser) {
+        this.showUser = showUser;
+    }
+
+    public char[][] getGuessingField() {
         return guessingField;
+    }
+
+    public void setGuessingField(char[][] guessingField) {
+        this.guessingField = guessingField;
     }
 }
 
