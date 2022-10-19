@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="update">
+    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="Guess už snad nejde vojebat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessinTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessinTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -98,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666077837648</updated>
       <workItem from="1666077840796" duration="2960000" />
-      <workItem from="1666162396320" duration="18645000" />
+      <workItem from="1666162396320" duration="21752000" />
     </task>
     <task id="LOCAL-00001" summary="Card guessing game!">
       <created>1666078017561</created>
@@ -205,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666178014176</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Guess už snad nejde vojebat">
+      <created>1666183418279</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666183418279</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +267,8 @@
     <MESSAGE value="experimental" />
     <MESSAGE value="experimental needs Array print" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Guess už snad nejde vojebat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Guess už snad nejde vojebat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

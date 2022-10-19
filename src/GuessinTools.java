@@ -73,9 +73,15 @@ public class GuessinTools {
 
     // Logika zda user Vyhrál
     public boolean alreadyWon(){
-        return counter == (fieldSize*2) - 1;
-    }
+        if (fieldSize == 2){
+            return counter == 1;
+        }else {
+            return counter == (fieldSize*2) - 1;
+        }
 
+    }
+    public static void showTempField(){
+    }
     public static int getCounter() {
         return counter;
     }
@@ -114,6 +120,7 @@ public class GuessinTools {
         }
         setGuessingField(guessingField);
     }
+    //
     // Generate game
     public void generateGame(){
         generateListOfOptions();

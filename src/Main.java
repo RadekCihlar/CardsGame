@@ -9,28 +9,36 @@ public class Main {
         boolean playAgain = true;
         int fieldSize;
 
-    while(playAgain){
 
 
-        do {
-            System.out.print("What size of field would you like? (2,4,6,8,10): ");
-            fieldSize = scanner.nextInt();
-            scanner.nextLine();
-            play.setFieldSize(fieldSize);
-            if (fieldSize % 2 != 0 && fieldSize <= 10 && fieldSize > 1){
-                System.out.println("Please provide different number");
-            }
-        }while(fieldSize % 2 != 0);
-            play.generateGame();
+
+
+        while(playAgain){
         while(!play.alreadyWon()){
-            //Show board to user only the first time
+
+            do {
+                System.out.print("What size of field would you like? (2,4,6,8,10): ");
+                fieldSize = scanner.nextInt();
+                scanner.nextLine();
+                play.setFieldSize(fieldSize);
+                if (fieldSize % 2 != 0 && fieldSize <= 10 && fieldSize > 1){
+                    System.out.println("Please provide different number");
+                }
+            }while(fieldSize % 2 != 0);
+
+            play.generateGame();
+
             if(flag){
                play.showPlayingField();
                 flag = false;
+                playAgain = false;
             }
-            play.showHiddenField();
+            System.out.println();
+
             //get user input
+            System.out.println();
             System.out.println("Enter positive number coordinates of card A (1-" + fieldSize + "), (1-" + fieldSize + "): ");
+            System.out.println();
 
             do {
                 System.out.print("Please enter a Row: ");
@@ -38,7 +46,7 @@ public class Main {
                     System.out.println("That's not a number!");
                     System.out.println();
                     System.out.print("Enter row again: ");
-                    scanner.next(); // this is important!
+                    scanner.nextLine(); // this is important!
                 }
                 pos1 = scanner.nextInt() - 1;
             } while (pos1 < -1);
@@ -49,12 +57,14 @@ public class Main {
                     System.out.println("That's not a number!");
                     System.out.println();
                     System.out.print("Enter column again: ");
-                    scanner.next(); // this is important!
+                    scanner.nextLine(); // this is important!
                 }
                 pos2 = scanner.nextInt() - 1;
             } while (pos2 < -1);
 
+            System.out.println();
             System.out.println("Enter positive number coordinates of card B (1-" + fieldSize + "), (1-" + fieldSize + "): ");
+            System.out.println();
 
             do {
                 System.out.print("Please enter a Row: ");
@@ -76,27 +86,30 @@ public class Main {
                     scanner.nextLine(); // this is important!
                 }
                 pos4 = scanner.nextInt() - 1;
-            } while (pos4 < -1);
+            } while (pos4 < -1 );
 
             play.guess(pos1, pos2, pos3, pos4);
-        }
-        //If user wins show whole field and ask for playing Again.
-        System.out.println("You have won!");
-        play.showHiddenField();
-        System.out.println();
-        System.out.println();
 
-        System.out.print("Do you wanna play again?: [Y/N]");
-        String userDecide = scanner.nextLine();
+            System.out.println("You have won!");
+            System.out.println();
+            System.out.println();
+
+            System.out.print("Do you wanna play again? [Y/N]: ");
+            String userDecide = scanner.next();
+
         if(userDecide.equalsIgnoreCase("N") || userDecide.equalsIgnoreCase("No")){
+            System.out.println();
             System.out.println("K thx bye!");
-            playAgain = false;
+            break;
         } else {
             play.setCounter(0);
+            playAgain = true;
             flag = true;
         }
-
     }
+
+        }
+        System.out.println();
         System.out.println("Thanks for playing!");
         scanner.close();
     }
