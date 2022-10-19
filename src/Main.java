@@ -28,53 +28,42 @@ public class Main {
                 flag = false;
             }
             //get user input
-            System.out.println("Enter positive number coordinates of card A (1-" + fieldSize + "), (1-" + fieldSize + "): ");
+            Scanner in = new Scanner(System.in);
+            System.out.print("Enter position of row of first card (1-4): ");
+            while (!in.hasNextInt() || Integer.parseInt(in.nextLine()) < 1)
+            {
+                // warning statement
+                System.out.println("Enter position of row of first card (1-4): ");
+                in.nextLine();
+            }
+            pos1 = Integer.parseInt(in.nextLine()) -1;
 
-            do {
-                System.out.print("Please enter a Row: ");
-                while (!scanner.hasNextInt()) {
-                    System.out.println("That's not a number!");
-                    System.out.println();
-                    System.out.print("Enter row again: ");
-                    scanner.next(); // this is important!
-                }
-                pos1 = scanner.nextInt() - 1;
-            } while (pos1 < -1);
+            System.out.print("Enter position of column of first card (1-4): ");
+            while (!in.hasNextInt() || Integer.parseInt(in.nextLine()) < 1)
+            {
+                // warning statement
+                System.out.println("Enter position of column of first card (1-4): ");
+                in.nextLine();
+            }
+            pos2 = Integer.parseInt(in.nextLine()) -1;
 
-            do {
-                System.out.print("Please enter a column: ");
-                while (!scanner.hasNextInt()) {
-                    System.out.println("That's not a number!");
-                    System.out.println();
-                    System.out.print("Enter column again: ");
-                    scanner.next(); // this is important!
-                }
-                pos2 = scanner.nextInt() - 1;
-            } while (pos2 < -1);
+            System.out.print("Enter position of row of second card (1-4): ");
+            while (!in.hasNextInt() || Integer.parseInt(in.nextLine()) < 1)
+            {
+                // warning statement
+                System.out.println("Enter position of row of second card (1-4): ");
+                in.nextLine();
+            }
+            pos3 = Integer.parseInt(in.nextLine()) -1;
 
-            System.out.println("Enter positive number coordinates of card B (1-" + fieldSize + "), (1-" + fieldSize + "): ");
-
-            do {
-                System.out.print("Please enter a Row: ");
-                while (!scanner.hasNextInt()) {
-                    System.out.println("That's not a number!");
-                    System.out.println();
-                    System.out.print("Enter row again: ");
-                    scanner.nextLine(); // this is important!
-                }
-                pos3 = scanner.nextInt() - 1;
-            } while (pos3 < -1);
-
-            do {
-                System.out.print("Please enter a column: ");
-                while (!scanner.hasNextInt()) {
-                    System.out.println("That's not a number!");
-                    System.out.println();
-                    System.out.print("Enter column again: ");
-                    scanner.nextLine(); // this is important!
-                }
-                pos4 = scanner.nextInt() - 1;
-            } while (pos4 < -1);
+            System.out.print("Enter position of column of second card (1-4): ");
+            while (!in.hasNextInt() || Integer.parseInt(in.nextLine()) < 1)
+            {
+                // warning statement
+                System.out.println("Enter position of column of first card (1-4): ");
+                in.nextLine();
+            }
+            pos4 = Integer.parseInt(in.nextLine()) -1;
 
             play.guess(pos1, pos2, pos3, pos4);
         }
