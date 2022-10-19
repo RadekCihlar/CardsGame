@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 
@@ -32,8 +33,9 @@ public class GuessinTools {
     // Logika hádání
     public void guess(int pos1, int pos2, int pos3, int pos4) throws InterruptedException {
 
-        if((pos1 < fieldSize) && (pos2 < fieldSize) && (pos3 < fieldSize) && (pos4 < fieldSize)) {
-            if ((pos1 == pos3 && pos2 == pos4)) {
+        if(guessingField[pos1][pos2] != '#' && guessingField[pos3][pos4] != '#'){
+            if((pos1 < fieldSize) && (pos2 < fieldSize) && (pos3 < fieldSize) && (pos4 < fieldSize)) {
+                if ((pos1 == pos3 && pos2 == pos4)) {
                 System.out.println("Enter different card coordinates!");
                 System.out.println();
 
@@ -41,6 +43,8 @@ public class GuessinTools {
             } else if (guessingField[pos1][pos2] == guessingField[pos3][pos4]) {
                 showUser[pos1][pos2] = guessingField[pos1][pos2];
                 showUser[pos3][pos4] = guessingField[pos3][pos4];
+                guessingField[pos3][pos4] = '#';
+                guessingField[pos1][pos2] = '#';
 
                 System.out.println("Correct!");
                 counter++;
@@ -62,6 +66,10 @@ public class GuessinTools {
             System.out.println("Enter valid numbers!");
         }
     }
+        else {
+            System.out.println("You have already guessed this combination!");
+        }
+}
 
     // Logika zda user Vyhrál
     public boolean alreadyWon(){
@@ -79,10 +87,10 @@ public class GuessinTools {
     public void generateListOfOptions(){
         for (int j = 0; j < 2; j++){
             for (int i = 1; i <= (fieldSize*fieldSize) / 2; i++){
-                listOfOptions.add('i');
+                char x = (char)(i+'0');
+                listOfOptions.add(x);
             }
         }
-
     }
     //Generate field that we show!
     public void generateShowUser(){

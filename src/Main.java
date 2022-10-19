@@ -11,6 +11,7 @@ public class Main {
 
     while(playAgain){
 
+
         do {
             System.out.print("What size of field would you like? (2,4,6,8,10): ");
             fieldSize = scanner.nextInt();
@@ -27,6 +28,7 @@ public class Main {
                play.showPlayingField();
                 flag = false;
             }
+            play.showHiddenField();
             //get user input
             System.out.println("Enter positive number coordinates of card A (1-" + fieldSize + "), (1-" + fieldSize + "): ");
 
