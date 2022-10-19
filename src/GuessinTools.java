@@ -8,7 +8,8 @@ public class GuessinTools {
     public GuessinTools() {
     }
     public static int counter = 0;
-    private ArrayList<Character> listOfOptions = new ArrayList<>(Arrays.asList('1','2','3','4','1','2','3','4','5','6','7','8','5','6','7','8'));
+    public int userWants;
+    private ArrayList<Character> listOfOptions = new ArrayList<>();
     private char[][] showUser =  {{'#', '#', '#', '#'}, {'#', '#', '#', '#'}, {'#', '#', '#', '#'}, {'#', '#', '#', '#'}};
     private char[][] guessingField = new char[4][4];
 
@@ -85,6 +86,14 @@ public class GuessinTools {
 
     public static void setCounter(int counter) {
         GuessinTools.counter = counter;
+    }
+    public void generateListOfOptions(int userWants){
+        for (int j = 0; j < 2; j++){
+            for (int i = 1; i < (userWants*userWants) / 2; i++){
+                listOfOptions.add('i');
+            }
+        }
+
     }
 
 }

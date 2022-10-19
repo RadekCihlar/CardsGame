@@ -8,11 +8,9 @@ public class Main {
         boolean flag = true;
         boolean playAgain = true;
 
-        play.generateHiddenField();
     while(playAgain){
-
-        //Show board to user only the first time
         while(!play.alreadyWon()){
+            //Show board to user only the first time
             if(flag){
                 play.showPlayingField();
                 flag = false;
@@ -48,5 +46,6 @@ public class Main {
 
     }
         System.out.println("Thanks for playing!");
+        scanner.close();
     }
 }
