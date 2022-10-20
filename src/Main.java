@@ -25,11 +25,12 @@ public class Main {
                 }
                 fieldSize = scanner.nextInt();
                 scanner.nextLine();
-                if (fieldSize > 10 || fieldSize < 2){
+                if (fieldSize > 10 || fieldSize < 2 || fieldSize % 2 != 0){
                     System.out.println("You are out of bounds!");
                     System.out.println();
                 }
-            } while (fieldSize >= 11 || fieldSize <= 1);
+            } while (fieldSize >= 11 || fieldSize <= 1 || fieldSize % 2 != 0);
+
             play.setFieldSize(fieldSize);
             play.generateGame();
 
@@ -99,6 +100,7 @@ public class Main {
             } while (pos4 < -0);
 
             play.guess(pos1, pos2, pos3, pos4);
+            play.setCounter(7);
         }
 
             System.out.println("You have won!");
