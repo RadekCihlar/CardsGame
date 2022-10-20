@@ -44,7 +44,6 @@ public class Main {
                 playAgain = false;
             }
             System.out.println();
-            play.showHiddenField();
 
             //get user input
             System.out.println();
@@ -57,7 +56,7 @@ public class Main {
                     System.out.println("That's not a number!");
                     System.out.println();
                     System.out.print("Enter row again: ");
-                    scanner.nextLine();
+                    scanner.next();
                 }
                 pos1 = scanner.nextInt() - 1;
             } while (pos1 < -0);
@@ -68,7 +67,7 @@ public class Main {
                     System.out.println("That's not a number!");
                     System.out.println();
                     System.out.print("Enter column again: ");
-                    scanner.nextLine();
+                    scanner.next();
                 }
                 pos2 = scanner.nextInt() - 1;
             } while (pos2 < -0);
@@ -83,7 +82,7 @@ public class Main {
                     System.out.println("That's not a number!");
                     System.out.println();
                     System.out.print("Enter row again: ");
-                    scanner.nextLine();
+                    scanner.next();
                 }
                 pos3 = scanner.nextInt() - 1;
             } while (pos3 < -0);
@@ -94,15 +93,13 @@ public class Main {
                     System.out.println("That's not a number!");
                     System.out.println();
                     System.out.print("Enter column again: ");
-                    scanner.nextLine();
+                    scanner.next();
                 }
                 pos4 = scanner.nextInt() - 1;
             } while (pos4 < -0);
-
+            System.out.println();
             play.guess(pos1, pos2, pos3, pos4);
-            play.setCounter(7);
         }
-
             System.out.println("You have won!");
             System.out.println();
 
@@ -112,9 +109,9 @@ public class Main {
 
             System.out.print("Do you wanna play again? [Y/N]: ");
             String userDecide = scanner.next();
+            System.out.println();
 
         if(userDecide.equalsIgnoreCase("N") || userDecide.equalsIgnoreCase("No")){
-            System.out.println();
             System.out.println("K thx bye!");
             break;
         } else {

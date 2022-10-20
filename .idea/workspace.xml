@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="papa please work">
+    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="working version :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessinTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessinTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -199,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666255508696</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="working version :)">
+      <created>1666259058309</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666259058309</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +243,16 @@
             </State>
           </value>
         </entry>
+        <entry key="c2b39644-80ac-4bd0-876d-6f9916f0137b">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="c2b39644-80ac-4bd0-876d-6f9916f0137b" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -253,7 +270,19 @@
     <MESSAGE value="working version" />
     <MESSAGE value="working version / not new game" />
     <MESSAGE value="papa please work" />
-    <option name="LAST_COMMIT_MESSAGE" value="papa please work" />
+    <MESSAGE value="working version :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="working version :)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GuessinTools.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

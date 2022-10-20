@@ -29,9 +29,6 @@ public class GuessinTools {
             System.out.println();
         }
     }
-
-
-
     public void showFilledField(){
         for (int i = 0; i < fieldSize; i++){
             for(int j = 0; j < fieldSize; j++){
@@ -40,6 +37,19 @@ public class GuessinTools {
             System.out.println();
         }
     }
+
+
+
+    public void copyFilledField(){
+        char[][] filledField = new char[fieldSize][fieldSize];
+        for (int i = 0; i < fieldSize; i++){
+            for(int j = 0; j < fieldSize; j++){
+                filledField[i][j] = guessingField[i][j];
+            }
+        }
+        setFilledField(filledField);
+    }
+
     // Logika hádání
     public void guess(int pos1, int pos2, int pos3, int pos4) throws InterruptedException {
 
@@ -47,6 +57,7 @@ public class GuessinTools {
             if(guessingField[pos1][pos2] != '#' && guessingField[pos3][pos4] != '#'){
                 if ((pos1 == pos3 && pos2 == pos4)) {
 
+                    System.out.println();
                     System.out.println("Enter different card coordinates!");
                     System.out.println();
 
@@ -61,6 +72,7 @@ public class GuessinTools {
                     System.out.println("Correct!");
                     counter++;
 
+                    System.out.println();
                     showPlayingField();
                 } else {
 
@@ -76,11 +88,13 @@ public class GuessinTools {
                 }
 
             } else {
+            System.out.println();
             System.out.println("You have already guessed this combination!");
             showPlayingField();
             }
         }
         else {
+            System.out.println();
             System.out.println("Enter valid numbers!");
             showPlayingField();
         }
@@ -91,7 +105,7 @@ public class GuessinTools {
         if (fieldSize == 2){
             return counter == 1;
         }else {
-            return counter == (fieldSize*2) - 1;
+            return counter == ((fieldSize*fieldSize)/2) - 1;
         }
 
     }
@@ -104,15 +118,6 @@ public class GuessinTools {
     public static void setCounter(int counter) {
         GuessinTools.counter = counter;
     }
-    // Generate list of possible combinations!
-//    public void generateListOfOptions(){
-//        for (int j = 0; j < 2; j++){
-//            for (int i = 1; i <= (fieldSize*fieldSize) / 2; i++){
-//                char x = (char)(i+'0');
-//                listOfOptions.add(x);
-//            }
-//        }
-//    }
     //Generate field that we show!
     public void generateShowUser(){
         char[][] showUser = new char[fieldSize][fieldSize];
@@ -176,14 +181,13 @@ public class GuessinTools {
         }
 
         setGuessingField(guessingField);
-        setFilledField(guessingField);
     }
 
-    //
     // Generate game
     public void generateGame(){
         generateShowUser();
         generateHiddenField();
+        copyFilledField();
     }
 
     public int getFieldSize() {
