@@ -33,7 +33,6 @@ public class Main {
             play.generateGame();
 
         while(!play.alreadyWon()){
-            // Generates the game!
 
             // shows playing field before any guesses and sets game to not repeat
             if(flag){
@@ -99,6 +98,7 @@ public class Main {
 
             // Checks user guess
             play.guess(pos1, pos2, pos3, pos4);
+            play.setCounter(7);
         }
             //Prints whole field after win!
             System.out.println("You have won!");

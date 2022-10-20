@@ -32,9 +32,7 @@ public class GuessinTools {
     public void copyFilledField(){
         char[][] filledField = new char[fieldSize][fieldSize];
         for (int i = 0; i < fieldSize; i++){
-            for(int j = 0; j < fieldSize; j++){
-                filledField[i][j] = guessingField[i][j];
-            }
+            System.arraycopy(guessingField[i], 0, filledField[i], 0, fieldSize);
         }
         setFilledField(filledField);
     }
