@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="working version :)">
+    <list default="true" id="393e27eb-76e7-4d42-a0e2-844c2fba893a" name="Changes" comment="we hawt. Could be master but its not qq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessinTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessinTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666259058309</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="we hawt. Could be master but its not qq">
+      <created>1666260609294</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666260609294</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +278,8 @@
     <MESSAGE value="working version / not new game" />
     <MESSAGE value="papa please work" />
     <MESSAGE value="working version :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working version :)" />
+    <MESSAGE value="we hawt. Could be master but its not qq" />
+    <option name="LAST_COMMIT_MESSAGE" value="we hawt. Could be master but its not qq" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

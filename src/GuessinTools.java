@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-
 public class GuessinTools {
     private static int counter = 0;
     private int fieldSize;
@@ -21,14 +20,6 @@ public class GuessinTools {
         }
     }
     // Ukazuje skryté herní pole, které hráč ne
-    public void showHiddenField(){
-        for (int i = 0; i < fieldSize; i++){
-            for(int j = 0; j < fieldSize; j++){
-                System.out.print(guessingField[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
     public void showFilledField(){
         for (int i = 0; i < fieldSize; i++){
             for(int j = 0; j < fieldSize; j++){
@@ -37,8 +28,6 @@ public class GuessinTools {
             System.out.println();
         }
     }
-
-
 
     public void copyFilledField(){
         char[][] filledField = new char[fieldSize][fieldSize];
@@ -81,7 +70,7 @@ public class GuessinTools {
                     showUser[pos1][pos2] = guessingField[pos1][pos2];
                     showUser[pos3][pos4] = guessingField[pos3][pos4];
                     showPlayingField();
-                    TimeUnit.SECONDS.sleep(5);
+                    TimeUnit.SECONDS.sleep(2);
                     System.out.println();
                     showUser[pos1][pos2] = '#';
                     showUser[pos3][pos4] = '#';
@@ -109,12 +98,6 @@ public class GuessinTools {
         }
 
     }
-    public static void showTempField(){
-    }
-    public static int getCounter() {
-        return counter;
-    }
-
     public static void setCounter(int counter) {
         GuessinTools.counter = counter;
     }
@@ -134,90 +117,37 @@ public class GuessinTools {
 
         char[][] guessingField = new char[fieldSize][fieldSize];
 
-        if (fieldSize == 10){
-            for (int i = 0; i < fieldSize; i++){
-                for(int j = 0; j < fieldSize; j++){
-                    int random = (int) Math.floor(Math.random() * listOfOptions.size());
-                    guessingField[i][j] = listOfOptions.get(random);
-                    listOfOptions.remove(random);
-        }
-            }
-        }else if(fieldSize == 8){
+        if(fieldSize == 8){
             listOfOptions.subList(64, listOfOptions.size()).clear();
-                    for (int i = 0; i < fieldSize; i++){
-                        for(int j = 0; j < fieldSize; j++){
-                            int random = (int) Math.floor(Math.random() * listOfOptions.size());
-                            guessingField[i][j] = listOfOptions.get(random);
-                            listOfOptions.remove(random);
-                        }
-                    }
-                } else if (fieldSize == 6) {
+        } else if (fieldSize == 6) {
                     listOfOptions.subList(36, listOfOptions.size()).clear();
-                    for (int i = 0; i < fieldSize; i++){
-                        for(int j = 0; j < fieldSize; j++){
-                            int random = (int) Math.floor(Math.random() * listOfOptions.size());
-                            guessingField[i][j] = listOfOptions.get(random);
-                            listOfOptions.remove(random);
-                        }
-                    }
-                }else if (fieldSize == 4) {
+        }else if (fieldSize == 4) {
                     listOfOptions.subList(16, listOfOptions.size()).clear();
-                    for (int i = 0; i < fieldSize; i++){
-                        for(int j = 0; j < fieldSize; j++){
-                            int random = (int) Math.floor(Math.random() * listOfOptions.size());
-                            guessingField[i][j] = listOfOptions.get(random);
-                            listOfOptions.remove(random);
-                        }
-                    }
-        } else{
+        } else if(fieldSize == 2){
             listOfOptions.subList(4, listOfOptions.size()).clear();
-            for (int i = 0; i < fieldSize; i++){
-                for(int j = 0; j < fieldSize; j++){
-                    int random = (int) Math.floor(Math.random() * listOfOptions.size());
-                    guessingField[i][j] = listOfOptions.get(random);
-                    listOfOptions.remove(random);
         }
-            }
-        }
-
+        for (int i = 0; i < fieldSize; i++){
+            for(int j = 0; j < fieldSize; j++){
+                int random = (int) Math.floor(Math.random() * listOfOptions.size());
+                guessingField[i][j] = listOfOptions.get(random);
+                listOfOptions.remove(random);
+            }}
         setGuessingField(guessingField);
     }
-
     // Generate game
     public void generateGame(){
         generateShowUser();
         generateHiddenField();
         copyFilledField();
     }
-
-    public int getFieldSize() {
-        return fieldSize;
-    }
-
     public void setFieldSize(int fieldSize) {
         this.fieldSize = fieldSize;
     }
-
-
-    public char[][] getShowUser() {
-        return showUser;
-    }
-
     public void setShowUser(char[][] showUser) {
         this.showUser = showUser;
-    }
-
-    public char[][] getGuessingField() {
-        return guessingField;
-    }
-
-    public void setGuessingField(char[][] guessingField) {
+    }public void setGuessingField(char[][] guessingField) {
         this.guessingField = guessingField;
     }
-    public char[][] getFilledField() {
-        return filledField;
-    }
-
     public void setFilledField(char[][] filledField) {
         this.filledField = filledField;
     }
