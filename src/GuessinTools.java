@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 
@@ -9,6 +8,7 @@ public class GuessinTools {
     private ArrayList<Character> listOfOptions = new ArrayList<>();
     private char[][] showUser;
     private char[][] guessingField;
+    private char[][] filledField;
 
 
     // Ukazuje herní pole, které je skryté a hráč vidí
@@ -30,46 +30,62 @@ public class GuessinTools {
         }
     }
 
+
+
+    public void showFilledField(){
+        for (int i = 0; i < fieldSize; i++){
+            for(int j = 0; j < fieldSize; j++){
+                System.out.print(filledField[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
     // Logika hádání
     public void guess(int pos1, int pos2, int pos3, int pos4) throws InterruptedException {
 
-        if(guessingField[pos1][pos2] != '#' && guessingField[pos3][pos4] != '#'){
-            if((pos1 < fieldSize) && (pos2 < fieldSize) && (pos3 < fieldSize) && (pos4 < fieldSize)) {
+        if((pos1 < fieldSize) && (pos2 < fieldSize) && (pos3 < fieldSize) && (pos4 < fieldSize)) {
+            if(guessingField[pos1][pos2] != '#' && guessingField[pos3][pos4] != '#'){
                 if ((pos1 == pos3 && pos2 == pos4)) {
-                System.out.println("Enter different card coordinates!");
-                System.out.println();
 
-                showPlayingField();
-            } else if (guessingField[pos1][pos2] == guessingField[pos3][pos4]) {
-                showUser[pos1][pos2] = guessingField[pos1][pos2];
-                showUser[pos3][pos4] = guessingField[pos3][pos4];
-                guessingField[pos3][pos4] = '#';
-                guessingField[pos1][pos2] = '#';
+                    System.out.println("Enter different card coordinates!");
+                    System.out.println();
 
-                System.out.println("Correct!");
-                counter++;
+                    showPlayingField();
+                } else if (guessingField[pos1][pos2] == guessingField[pos3][pos4]) {
 
-                showPlayingField();
+                    showUser[pos1][pos2] = guessingField[pos1][pos2];
+                    showUser[pos3][pos4] = guessingField[pos3][pos4];
+                    guessingField[pos3][pos4] = '#';
+                    guessingField[pos1][pos2] = '#';
+
+                    System.out.println("Correct!");
+                    counter++;
+
+                    showPlayingField();
+                } else {
+
+                    System.out.println("Inccorect!");
+                    System.out.println();
+                    showUser[pos1][pos2] = guessingField[pos1][pos2];
+                    showUser[pos3][pos4] = guessingField[pos3][pos4];
+                    showPlayingField();
+                    TimeUnit.SECONDS.sleep(5);
+                    System.out.println();
+                    showUser[pos1][pos2] = '#';
+                    showUser[pos3][pos4] = '#';
+                    showPlayingField();
+                }
+
             } else {
-                System.out.println("Inccorect!");
-                System.out.println();
-                showUser[pos1][pos2] = guessingField[pos1][pos2];
-                showUser[pos3][pos4] = guessingField[pos3][pos4];
-                showPlayingField();
-                TimeUnit.SECONDS.sleep(5);
-                System.out.println();
-                showUser[pos1][pos2] = '#';
-                showUser[pos3][pos4] = '#';
-                showPlayingField();
+            System.out.println("You have already guessed this combination!");
+            showPlayingField();
             }
-        } else {
+        }
+        else {
             System.out.println("Enter valid numbers!");
+            showPlayingField();
         }
     }
-        else {
-            System.out.println("You have already guessed this combination!");
-        }
-}
 
     // Logika zda user Vyhrál
     public boolean alreadyWon(){
@@ -119,6 +135,7 @@ public class GuessinTools {
             }
         }
         setGuessingField(guessingField);
+        setFilledField(guessingField);
     }
     //
     // Generate game
@@ -159,5 +176,11 @@ public class GuessinTools {
     public void setGuessingField(char[][] guessingField) {
         this.guessingField = guessingField;
     }
-}
+    public char[][] getFilledField() {
+        return filledField;
+    }
 
+    public void setFilledField(char[][] filledField) {
+        this.filledField = filledField;
+    }
+}

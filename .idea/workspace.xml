@@ -42,38 +42,33 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GIZ0AeZArZ7PDoiiBZmzoPqGrQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Main">
+}</component>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="CardsGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testest" />
       <module name="CardsGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,7 +77,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.testest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
@@ -98,7 +93,6 @@
       <option name="presentableId" value="Default" />
       <updated>1666077837648</updated>
       <workItem from="1666077840796" duration="2960000" />
-      <workItem from="1666162396320" duration="21752000" />
     </task>
     <task id="LOCAL-00001" summary="Card guessing game!">
       <created>1666078017561</created>
@@ -170,49 +164,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666089339688</updated>
     </task>
-    <task id="LOCAL-00011" summary="fixed inputs">
-      <created>1666100610093</created>
+    <task id="LOCAL-00011" summary="working version">
+      <created>1666183999811</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1666100610093</updated>
+      <updated>1666183999811</updated>
     </task>
-    <task id="LOCAL-00012" summary="experimental">
-      <created>1666102250853</created>
+    <task id="LOCAL-00012" summary="working version">
+      <created>1666184104749</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1666102250860</updated>
+      <updated>1666184104749</updated>
     </task>
-    <task id="LOCAL-00013" summary="experimental">
-      <created>1666162236336</created>
+    <task id="LOCAL-00013" summary="working version / not new game">
+      <created>1666188569111</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1666162236336</updated>
+      <updated>1666188569111</updated>
     </task>
-    <task id="LOCAL-00014" summary="experimental needs Array print">
-      <created>1666175091764</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1666175091766</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1666178014175</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1666178014176</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Guess už snad nejde vojebat">
-      <created>1666183418279</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1666183418279</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,22 +236,9 @@
     <MESSAGE value="fix of guess" />
     <MESSAGE value="win condition added" />
     <MESSAGE value="preparation for playing field" />
-    <MESSAGE value="fixed inputs" />
-    <MESSAGE value="experimental" />
-    <MESSAGE value="experimental needs Array print" />
-    <MESSAGE value="update" />
-    <MESSAGE value="Guess už snad nejde vojebat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guess už snad nejde vojebat" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="working version" />
+    <MESSAGE value="working version / not new game" />
+    <option name="LAST_COMMIT_MESSAGE" value="working version / not new game" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
