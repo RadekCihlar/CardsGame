@@ -98,7 +98,6 @@ public class Main {
 
             // Checks user guess
             play.guess(pos1, pos2, pos3, pos4);
-            play.setCounter(7);
         }
             //Prints whole field after win!
             System.out.println("You have won!");
@@ -115,7 +114,7 @@ public class Main {
         if(userDecide.equalsIgnoreCase("N") || userDecide.equalsIgnoreCase("No")){
             break;
         } else {
-            play.setCounter(0);
+            GuessinTools.setCounter(0);
             playAgain = true;
             flag = true;
         }
